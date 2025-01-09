@@ -3,7 +3,8 @@ import type { NextRequest } from "next/server";
 
 export default function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
-  const isPublicPath = path === "/auth/signin" || path === "/auth/signup";
+  const isPublicPath =
+    path === "/auth/signin" || path === "/auth/signup" || path === "/landing";
   const token = request.cookies.get("SessionToken")?.value || "";
 
   // Allow static files and API routes
@@ -18,7 +19,7 @@ export default function middleware(request: NextRequest) {
 
   if (!isPublicPath && !token) {
     console.log("Redirecting to sign-in page");
-    return NextResponse.redirect(new URL("/auth/signin", request.url));
+    return NextResponse.redirect(new URL("/landing", request.url));
   }
   console.log(`Proceeding with request to URL: ${request.url}`);
   return NextResponse.next();
