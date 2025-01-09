@@ -4,16 +4,12 @@ import type { NextRequest } from "next/server";
 export default function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const isPublicPath = path === "/auth/signin" || path === "/auth/signup";
-  const token = request.cookies.get("token")?.value || "";
-  console.log(`Path: ${path}, Token: ${token}`);
+  const token = request.cookies.get("SessionToken")?.value || "";
 
-  console.log(`Path: ${path}, IsPublicPath: ${isPublicPath}, Token: ${token}`);
   // Allow static files and API routes
   if (path.startsWith("/_next/") || path.startsWith("/api/")) {
     return NextResponse.next();
   }
-
-  console.log(`Path: ${request.nextUrl.pathname}`);
 
   if (isPublicPath && token) {
     console.log("Redirecting to home page");
