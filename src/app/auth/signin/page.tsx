@@ -36,7 +36,7 @@ const SignIn: React.FC = () => {
       }
 
       const data = await response.json();
-      if (response.ok) {
+      if (data.SessionToken) {
         alert("login successful" + response.body);
         console.log("token is ", data.SessionToken);
         Cookies.set("SessionToken", data.SessionToken, {
@@ -47,10 +47,10 @@ const SignIn: React.FC = () => {
         });
         router.push("/");
       } else {
+        setLoading(false);
         alert("login failed");
         const errorData = await response.json();
         alert(errorData.error);
-        setLoading(false);
       }
     } catch (error: any) {
       console.log("error is", error.message);
