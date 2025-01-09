@@ -7,7 +7,6 @@ export default function middleware(request: NextRequest) {
     path === "/auth/signin" || path === "/auth/signup" || path === "/landing";
   const token = request.cookies.get("SessionToken")?.value || "";
 
-  // Allow static files and API routes
   if (path.startsWith("/_next/") || path.startsWith("/api/")) {
     return NextResponse.next();
   }
