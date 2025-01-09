@@ -26,7 +26,7 @@ export default function DefaultLayout({
     <>
       <Header />
 
-      <main className="grow">{children}</main>
+      <main className="w-full grow overflow-x-hidden">{children}</main>
 
       <Footer border={true} />
     </>
