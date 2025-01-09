@@ -59,9 +59,14 @@ const options: ApexOptions = {
     fontWeight: 500,
     fontSize: "14px",
 
-    markers: {
-      radius: 99,
-    },
+    // markers: {
+    //   radius: 99,
+    // },
+    // markers: {
+    //   size: 8, // Size of the markers
+    //   strokeWidth: 2, // Width of the border around the markers
+    //   fillColors: ["#3C50E0", "#80CAEE"], // Fill colors for the markers
+    // },
   },
   fill: {
     opacity: 1,
