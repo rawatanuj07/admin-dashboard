@@ -45,7 +45,7 @@ const SignIn: React.FC = () => {
           sameSite: "Strict",
           path: "/",
         });
-        router.push("/");
+        router.push("/dashboard");
         console.log("pushing to / route");
       } else {
         setLoading(false);
