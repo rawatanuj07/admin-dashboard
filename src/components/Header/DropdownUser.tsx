@@ -29,16 +29,17 @@ const DropdownUser = () => {
           <span className="block text-xs">UX Designer</span>
         </span>
 
-        <span className="h-12 w-12 rounded-full">
+        <span className="h-12 w-12 rounded rounded-full">
           <Image
             width={112}
             height={112}
-            src={"/images/user/user-01.png"}
+            src={"/images/user/user-01.jpg"}
             style={{
               width: "auto",
               height: "auto",
             }}
             alt="User"
+            className="mt-2 aspect-square h-12 w-12 rounded-full object-cover"
           />
         </span>
 

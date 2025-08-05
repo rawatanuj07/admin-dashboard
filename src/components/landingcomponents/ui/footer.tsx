@@ -14,8 +14,17 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <div>
               <Logo />
             </div>
-            <div className="text-sm text-gray-600">
-              &copy; Cruip.com - All rights reserved.
+            <div>
+              &copy;
+              <Link
+                href="https://decode-parvati.tech"
+                className="text-bold text-italic mx-2 text-lg text-indigo-900"
+              >
+                decode-parvati.tech
+              </Link>{" "}
+              <span className="text-md text-bold text-gray-1000">
+                - All rights reserved.
+              </span>
             </div>
           </div>
 

@@ -335,14 +335,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       >
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-          <Link href="/">
-            <Image
-              width={176}
-              height={32}
-              src={"/images/logo/logo.svg"}
-              alt="Logo"
-              priority
-            />
+          <Link href="/landing">
+            <h1 className="rounded rounded-lg bg-indigo-200 p-2 text-3xl font-bold text-indigo-500  underline underline-offset-4 hover:decoration-2">
+              CoreView
+            </h1>
           </Link>
 
           <button

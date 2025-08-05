@@ -46,6 +46,7 @@ const SignIn: React.FC = () => {
           path: "/",
         });
         router.push("/");
+        console.log("pushing to / route");
       } else {
         setLoading(false);
         alert("login failed");

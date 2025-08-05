@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home - Simple",
+  title: "Decode Parvati - Admin Dashboard",
   description: "Page description",
 };
 
