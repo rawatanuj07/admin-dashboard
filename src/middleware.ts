@@ -4,6 +4,7 @@ import type { NextRequest } from "next/server";
 export default function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const token = request.cookies.get("SessionToken")?.value || "";
+  console.log(`Middleware path: ${path}, token: ${token}`);
 
   // Ignore Next.js internals and API routes
   if (path.startsWith("/_next/") || path.startsWith("/api/")) {
@@ -12,6 +13,8 @@ export default function middleware(request: NextRequest) {
 
   // Restrict root "/" to authenticated users only
   if (path === "/" && !token) {
+    console.log("Redirecting to /landing due to no token");
+
     return NextResponse.redirect(new URL("/landing", request.url));
   }
 
