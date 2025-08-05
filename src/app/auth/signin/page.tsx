@@ -45,6 +45,7 @@ const SignIn: React.FC = () => {
           sameSite: "Strict",
           path: "/",
         });
+        window.location.href = "/";
         router.push("/");
         console.log("pushing to / route");
       } else {
