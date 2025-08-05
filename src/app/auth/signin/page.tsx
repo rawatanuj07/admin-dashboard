@@ -67,7 +67,7 @@ const SignIn: React.FC = () => {
           <div className="hidden w-full xl:block xl:w-1/2">
             <div className="px-26 py-17.5 text-center">
               <p className="2xl:px-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Lorem ipsum dolor-sit amet, consectetur adipiscing elit
                 suspendisse.
               </p>
 
